@@ -1,0 +1,144 @@
+
+@keyframes bg {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+.section-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.image-slider {
+    margin-bottom: 230px;
+
+}
+
+.slide {
+    position: absolute;
+    text-align: center;
+    width:97%;
+    /* clip-path: circle(0% at 0 50%); */
+    clip-path: polygon(0% 80%, 0% 20%, 0% 10%, 0% 10%);
+    /* clip-path: polygon(0% 100%, 0% 1%, 0% 100%, 0% 28%);; */
+    border: 2px solid black;
+    transition: all 1.5s ease-in-out;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slide.active {
+    justify-content: center; /*centers items on the line (the x-axis by default)*/
+    align-items: center;
+    /* clip-path: circle(150% at 0 50%); */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+    border-radius: 15px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    width: 200px;
+    height: 200px;
+    
+    border-radius: 15px;
+}
+
+.slide-text {
+    left: 20%;
+    right: 20%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(220, 220, 220, 0.609);
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 1.5s ease-in-out;
+}
+
+.slide-text.active {
+    text-align: center;
+    bottom: 50px;
+    padding: auto;
+}
+
+.slide-text h2 {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    font-family: "spacegrotesk";
+}
+
+.slide-text p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    font-family: "montserrat";
+}
+
+.navigation {
+    background-color: rgba(220, 220, 220, 0.809);
+    padding: 10px;
+    border-radius: 10%;
+    position: absolute;
+    display: flex;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slider-btn {
+    background-color: rgb(0, 0, 0);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.5s ease-in;
+}
+
+.slider-btn.active {
+    background-color: rgb(38, 70, 83);
+    border-radius: 25%;
+    width: 23px;
+}
+
+.player-btn {
+    /* background-color: rgb(151, 151, 151);
+    width: 12px;
+    height: 12px; */
+    cursor: pointer;
+    margin: 0 5px;
+    border: 6px solid rgb(38, 70, 83);
+    transition: all 0.1s ease-in-out;
+}
+
+.player-btn.stop {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 0 solid transparent;
+    border-left: 12px solid rgb(38, 70, 83);
+}
+
+@media screen and (max-width: 600px) {
+    .image-slider {
+        display: none;
+    }
+}
