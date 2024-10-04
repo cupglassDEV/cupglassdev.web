@@ -1,0 +1,34 @@
+form.contact {  
+    display: none;
+    position:fixed; /* Fixed/sticky position */
+    bottom: 25vh; /* Place the button at the bottom of the page */
+    right: 30vw; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(152, 47, 173); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 30px;
+}
+.profile.socials li.contactme {
+    width: 10px;
+}
+.profile.socials li.contactme button {
+    margin-left: -28px;
+    margin-top: -10px;
+    border-radius: 10px;
+    font-family: 'spacegrotesk';
+    border-color: rgb(76, 88, 88);
+    background-color: rgb(185, 198, 198);
+}
+@media screen and (max-width: 600px) {
+    form.contact {
+        display: none;
+    }
+    .profile.socials li.contactme {
+        display: none;
+    }
+}

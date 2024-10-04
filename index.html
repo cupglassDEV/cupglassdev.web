@@ -9,7 +9,37 @@
     <script src="https://kit.fontawesome.com/fd209a3d4c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <script>
+        function toggleContact(){
+            const c = document.querySelector("form.contact")
+            if (c.style.display==="none") c.style.display = "block"; else c.style.display = "none"
+        }
+    </script>
+    <!-- <header>
+        <h1>Hello</h1>
+        <ul class="header links">
+            <li href="#page">Home</li>
+            <li href="#footer">Footer</li>
+            <li href="#contact">Contact</li>
+        </ul>
+    </header> -->
+    <form class="contact">
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br>   
+            <input type="submit" value="Submit">
+            
+    </form>
+    <a class="totop" href="#page"><i class="fa-solid fa-arrow-up"></i></a>
+    <div id="page"></div>
     <div class="page">
+   
     <div class="jumbotron container">
     </div>
     <div class="info container">
@@ -27,6 +57,7 @@
             </div>
             <div class="profile social container">
                 <ul class="profile socials">
+                    <li class="contactme"><button onclick="toggleContact()">Contact me</button></li>
                     <li href="https://github.com/cupglassdev">Github</li>
                     <li href="https://x.com/cupglassdev">Twitter</li>
                 </ul>
@@ -34,6 +65,17 @@
         </div>
     </aside>
     <div class="articles">
+        <article class="article container adv">
+            <img class="article adv child image" src="https://avatars.githubusercontent.com/u/487568?s=200&v=4">
+            <div>
+            <h1 class="article child title">Halo, iseng buat image nix buat Raspberry pi aku</h1>
+            <p class="article child desc">Iya, abis lumayan numpang di github action, terus buat os dari satu file, deh. Wah kok arsitekturnya beda ya dari github actionnya...</p>
+            <ul class="article child links">
+               <li href="https://github.com/cupglassdev/rpi-nix">Repositorynya</li>
+               <li href="https://github.com/cupglassdevpp/rpi-nix">Versi development kalo mau nyoba</li>
+            </ul>
+        </div>
+        </article>
         <article class="article container adv">
             <img class="article adv child image" src="assets/images/profile.png">
             <div>
@@ -59,7 +101,7 @@
     
     </div>
     </main>
-    <footer>
+    <footer id="footer">
         <p class="about">
             my epikk website
 <br>

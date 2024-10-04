@@ -1,11 +1,10 @@
-@import url('jumbotron.css');
-@import url('footer.css');
-@font-face {
-    font-family: 'spacegrotesk';
-    src: url('./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf');
-}
+/* to make the workaround... works! */
+@import url("import-manager.css");
 :root {
     --cgd-duration:0.3s
+}
+.hide {
+    display: none;
 }
 body {
     font-family: 'spacegrotesk';
@@ -27,8 +26,8 @@ ul {
     width:10px;
     margin-left: 10px;
     
-        position: relative;
-        width: 50%;
+    position: relative;
+    width: 50%;
 }
 .profile.pic.container img {
     max-width:70px;
@@ -46,7 +45,7 @@ ul {
     display:flex;
     justify-content: space-around;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 .info.title {
     font-size: 30px;
@@ -55,7 +54,7 @@ ul {
     font-size: 20px;
 }
 .info.container:hover {
-    padding:20px
+    padding:0px
 }
 .info.marker {
     background-color: rgba(0, 0, 0, 0.189);
@@ -108,11 +107,13 @@ aside {
     align-items:center;
     justify-content:center;
 }
-.article.container:hover {
-    padding:5%;
-}
 ul.profile.socials {
     margin-right: 1%;
+}
+.socials li a i {
+    font-size: xx-large;
+    position: relative;
+    right: 15px;
 }
 .profile.socials li a {
     color:black
@@ -129,11 +130,6 @@ ul.profile.socials {
     .profiles {
         align-self: center;
         flex-direction: row;
-    }
-    aside:hover {
-        
-    padding-left: 20px;
-    padding-right: 20px;
     }
     aside {
         border-radius: 10px;
@@ -157,6 +153,6 @@ ul.profile.socials {
         flex-wrap: wrap;
     }
     .info.container:hover {
-        padding: 10px;
+        padding: inherit;
     }
 }
