@@ -138,12 +138,12 @@ customElements.define("v-cursor", class extends Elemxx {
                 rotation += (targetRotation - rotation) * 0.2;
         
                 // Ambil ukuran elemen cursor
-                const offsetX = cursor.offsetWidth / 2;
-                const offsetY = (cursor.offsetHeight / 2)+10;
+                const offsetX = (cursor.offsetWidth / 2)-20;
+                const offsetY = (cursor.offsetHeight / 2)-30;
         
                 // Terapkan transformasi
-                cursor.style.left = `${e.clientX - offsetX}px`;
-                cursor.style.top = `${e.clientY - offsetY}px`;
+                cursor.style.left = `${e.clientX + offsetX}px`;
+                cursor.style.top = `${e.clientY + offsetY}px`;
                 cursor.style.transform = `rotate(${rotation}deg)`;
                 
                 lastX = e.clientX;
