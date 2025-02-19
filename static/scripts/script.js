@@ -130,19 +130,22 @@ customElements.define("v-cursor", class extends Elemxx {
             function updateCursor(e) {
                 const deltaX = e.clientX - lastX;
                 const deltaY = e.clientY - lastY;
-
-                // Calculate rotation based on movement direction
+                
+                // Hitung rotasi berdasarkan arah gerakan
                 const targetRotation = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-
-                // Smooth out the rotation
+        
+                // Buat transisi lebih smooth
                 rotation += (targetRotation - rotation) * 0.2;
-
-                // Offset the cursor element so its tip aligns with the mouse pointer
-                const offsetX = -290;
-                const offsetY = -305;
-
-                cursor.style.transform = `translate(${e.clientX + offsetX}px, ${e.clientY + offsetY}px) rotate(${rotation}deg)`;
-
+        
+                // Ambil ukuran elemen cursor
+                const offsetX = cursor.offsetWidth / 2;
+                const offsetY = (cursor.offsetHeight / 2)+10;
+        
+                // Terapkan transformasi
+                cursor.style.left = `${e.clientX - offsetX}px`;
+                cursor.style.top = `${e.clientY - offsetY}px`;
+                cursor.style.transform = `rotate(${rotation}deg)`;
+                
                 lastX = e.clientX;
                 lastY = e.clientY;
             }
