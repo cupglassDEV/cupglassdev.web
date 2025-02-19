@@ -1,9 +1,0 @@
-@import url('fonts.css');
-@import url('jumbotron.css');
-@import url('footer.css');
-@import url('header.css');
-@import url('contact.css');
-@import url('totop.css');
-body p.cgd-warning {
-    display: none;
-}
